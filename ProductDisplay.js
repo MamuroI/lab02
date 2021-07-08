@@ -16,6 +16,7 @@ app.component('product-display',{
                     <h1>{{title}}</h1>
                     <p v-if="inStock">In Stock</p>
                     <p v-else>Out of Stock</p>
+                    <product-details :details="details"></product-details>
                     <p>Shipping: {{shipping}}</p>
                     <div 
                         v-for="(variant, index) in variants"
@@ -45,7 +46,7 @@ app.component('product-display',{
                     { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity:0 }
                 ],
                 activeClass: true,
-                selectedVariant:0
+                selectedVariant:0,
             }
         },
         methods: {

@@ -3,17 +3,14 @@ app.component('product-details',{
         details:{
             type: String,
             required: true
-        }
+        },
     },
     template:
+        `<p>Materials Details:</p>
+        <ul>
+            <li v-for="detail in details">{{ detail }}</li>
+        </ul>
         `
-        <div class="product-details">
-            <p>Details: {{details}}</p>
-        </div>
-        `,
-        computed: {
-            details(){
-                return this.details
-            }
-        }
+        
+        
 })
